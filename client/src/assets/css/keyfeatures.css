@@ -1,0 +1,86 @@
+.keyfeatures-section {
+    background-color: #05023A;
+    overflow: hidden;
+    padding-bottom: 30px;
+    background-color: #05023a;
+    position: relative;
+    z-index: 3;
+}
+
+.keyfeatures-section .slick-prev,
+.keyfeatures-section .slick-next {
+    z-index: 1;
+}
+.keyfeatures-section .slick-prev {
+    left: 10px;
+    z-index: 1;
+}
+.keyfeatures-section .slick-next {
+    right: 10px;
+    z-index: 1;
+}
+
+.keyfeatures-section .big-sword-container {
+    display: none;
+}
+.keyfeatures-section .big-sword-container img {
+    height: 130%;
+}
+.keyfeatures-section .big-sword-container img:first-child {
+    filter: drop-shadow(0px 0px 5px #4ea1ff);
+    animation: glowing 6s ease-out infinite;
+}
+@keyframes glowing {
+    0% {
+        filter: drop-shadow(0px 0px 5px #4ea1ff);
+    }
+    50% {
+        filter: drop-shadow(5px -5px 30px #4ea1ff);
+    }
+    100% {
+        filter: drop-shadow(0px 0px 5px #4ea1ff);
+    }
+}
+
+.keyfeatures-section .text-image h2 {
+    text-align: center;
+}
+.keyfeatures-section .text-image img {
+    height: 250px!important;
+    width: 250px!important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+    .keyfeatures-section {
+        overflow-x: visible;
+        overflow-y: visible;
+    }
+    .keyfeatures-section h2 {
+        font-size: 50px;
+    }
+    .keyfeatures-section .big-sword-container img {
+        transform: none!important;
+        right: -12.5vw;
+    }
+    .keyfeatures-section .text-image h2 {
+        text-align: left;
+    }
+    .keyfeatures-section .text-image img {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+/* TODO: just a hotfix for sword mobile */
+@media (min-width: 1400px) {
+    .keyfeatures-section .big-sword-container {
+        display: block;
+    }
+}
+@media (min-width: 3000px) {
+    .keyfeatures-section .big-sword-container img {
+        height: 150%;
+    }
+}

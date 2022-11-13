@@ -1,0 +1,424 @@
+.hero-section {
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    width: 100%;
+    background-image: url('../images/hero-bg.svg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-section a.d-flex {
+    justify-content: center;
+}
+
+/* Animation */
+.stop-animation {
+    animation-play-state: paused;
+}
+
+.hero-planet {
+    animation: rotate 300s linear infinite;
+}
+@keyframes rotate {
+    100% {
+        transform: rotate(-1turn);
+    }
+}
+
+.hero-arena {
+    animation: levitate 7s linear infinite;
+}
+@keyframes levitate {
+    0% {
+        margin-top: 0;
+    }
+    30% {
+        margin-top: 20px;
+    }
+    50% {
+        margin-top: 30px;
+    }
+    80% {
+        margin-top: 10px;
+    }
+    100% {
+        margin-top: 0;
+    }
+}
+
+.spaceship-flight {
+    animation: flight 30s ease-out infinite;
+    animation-delay: 6s;
+}
+@keyframes flight {
+    0% {
+        width: 25%;
+        top: 30%;
+        left: -25%;
+    }
+    7%, 100% {
+        width: 0%;
+        top: 10%;
+        left: 85%;
+    }
+}
+
+.centerize-arena {
+    transition: right 2s ease-out, top 2s ease-out, width 2s ease-out;
+    width: 90%!important;
+    top: 20%!important;
+}
+.centerize-down {
+    transition: bottom 800ms ease-in;
+    bottom: -100vh!important;
+    bottom: calc(var(--vh, 1vh) * -100)!important;
+}
+.centerize-left {
+    transition: left 1s ease-in, bottom 1s ease-in;
+    left: -100%!important;
+    bottom: -100vh!important;
+    bottom: calc(var(--vh, 1vh) * -100)!important;
+}
+.centerize-planet {
+    transition: left 2s ease-out, top 2s ease-out, width 2s ease-out;
+    width: 140%!important;
+    top: 50vh!important;
+    top: calc(var(--vh, 1vh) * 50)!important;
+    left: -70%!important;
+}
+
+.zoom-in-arena {
+    animation: zoomIn 2s forwards;
+}
+@keyframes zoomIn {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(15);
+    }
+}
+
+.zoom-overlay {
+    transition: opacity 1s linear;
+    background-color: #29b7fe;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    opacity: 0;
+}
+
+.zoom-overlay.show {
+    opacity: 1;
+}
+
+/* Mobile styling */
+.hero-menu {
+    height: 100%;
+    width: max-content;
+    margin: auto;
+}
+
+.hero-menu h1 {
+    text-transform: uppercase;
+    font-size: 30px;
+    text-shadow: 3px 3px #4b2298;
+}
+
+.hero-menu .btn-primary {
+    transition: box-shadow 300ms linear;
+    font-size: 20px;
+}
+
+.hero-menu .btn-primary:hover {
+    opacity: 1!important;
+    box-shadow: 0px 0px 20px #62d7ee;
+}
+
+.hero-logo {
+    width: 12vw;
+    min-width: 180px;
+    height: auto;
+}
+
+.hero-planet {
+    position: absolute;
+    width: 100%;
+    top: 65vh;
+    top: calc(var(--vh, 1vh) * 65);
+    left: 0;
+}
+
+.hero-arena {
+    position: absolute;
+    width: 60%;
+    min-width: 200px;
+    top: 0%;
+}
+
+.hero-ship {
+    position: absolute;
+    width: 25%;
+    top: 30%;
+    left: -25%;
+}
+
+.hero-fighter-bg {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+.hero-fighter {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+.hero-city-bg {
+    position: absolute;
+    width: 140%;
+    bottom: 0;
+    left: 0;
+}
+.hero-city {
+    position: absolute;
+    width: 160%;
+    bottom: 0;
+    left: 0;
+}
+.hero-astronaut-bg {
+    position: absolute;
+    width: 100%;
+    bottom: -30px;
+    left: 0;
+}
+.hero-astronaut {
+    position: absolute;
+    width: 45vw;
+    bottom: 0;
+    left: 0;
+}
+
+/* Parallax fix */
+.hero-planet {
+    z-index: 0;
+}
+#scene {
+    height: 100%;
+    z-index: 1;
+}
+#scene .hero-city-bg {
+    position: absolute!important;
+    top: inherit!important;
+    left: -100px!important;
+    z-index: 0;
+}
+#scene > div {
+    position: unset!important;
+    height: 100%;
+    display: flex!important;
+}
+#scene .hero-city {
+    position: absolute!important;
+    top: inherit!important;
+    left: -100px!important;
+    bottom: -20px;
+}
+#scene .hero-astronaut-bg {
+    top: unset!important;
+    width: 120%;
+    left: -100px!important;
+}
+
+/* Special height styling */
+@media (max-height: 320px) {
+    .hero-logo {
+        min-width: 140px;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-height: 650px) {
+    .hero-arena {
+        top: 5%;
+    }
+}
+
+@media (min-height: 800px) {
+    .hero-arena {
+        top: 7.5%;
+    }
+}
+
+/* Special width styling */
+@media (min-width: 500px) {
+    .hero-arena {
+        width: 50%;
+    }
+}
+
+@media (min-width: 600px) {
+    .hero-arena {
+        width: 40%;
+    }
+}
+
+/* Tablet styling */
+@media (min-width: 768px) {
+    .hero-arena {
+        width: 35%;
+    }
+    .hero-planet {
+        top: 60vh;
+        top: calc(var(--vh, 1vh) * 60);
+    }
+}
+
+/* Desktop styling */
+@media (min-width: 992px) {
+    .hero-planet {
+        top: 45vh;
+        top: calc(var(--vh, 1vh) * 45);
+    }
+
+    .hero-arena {
+        width: 30%;
+        right: 0;
+        bottom: 40%;
+    }
+
+    .centerize-arena {
+        transition: right 2s ease-out, top 2s ease-out, width 2s ease-out;
+        width: 50%!important;
+        top: 10%!important;
+        right: 25%!important;
+    }
+}
+
+/* XL Desktop styling */
+@media (min-width: 1200px) {
+    .hero-menu {
+        height: 85%;
+    }
+
+    .hero-menu h1 {
+        font-size: 50px;
+        margin-bottom: 30px;
+    }
+
+    .hero-menu .btn-primary {
+        font-size: 30px;
+        line-height: 30px;
+        margin-bottom: 30px;
+    }
+
+    .btn-icon {
+        height: 25px;
+        width: 25px;
+        font-size: 25px;
+    }
+
+    .hero-logo {
+        min-width: 300px;
+    }
+}
+
+/* Secial screen size styling */
+@media (min-width: 2500px) {
+    .hero-logo {
+        min-width: 400px;
+    }
+}
+
+@media (max-height: 1200px) and (min-width: 2500px) {
+    .hero-arena {
+        width: 20%;
+    }
+
+    .hero-city-bg {
+        width: 100%;
+        bottom: -100px;
+    }
+    .hero-city {
+        width: 120%;
+        bottom: -100px;
+    }
+    .hero-astronaut-bg {
+        display: none;
+    }
+    .hero-astronaut {
+        bottom: -200px;
+        width: 40vw;
+    }
+
+    /* Parallax fix */
+    #scene .hero-city-bg {
+        bottom: -200px!important;
+    }
+    #scene .hero-city {
+        bottom: -200px;
+    }
+    #scene .hero-astronaut-bg {
+        display: none!important;
+    }
+}
+
+@media (max-height: 1600px) and (min-width: 3000px) {
+    .hero-menu h1 {
+        font-size: 70px;
+        margin-bottom: 30px;
+    }
+
+    .hero-menu .btn-primary {
+        font-size: 40px;
+        line-height: 40px;
+        margin-bottom: 30px;
+    }
+
+    .btn-icon {
+        height: 30px;
+        width: 30px;
+        font-size: 30px;
+    }
+
+    .hero-arena {
+        width: 20%;
+    }
+
+    .hero-city-bg {
+        width: 100%;
+        bottom: -100px;
+    }
+    .hero-city {
+        width: 100%;
+        bottom: -100px;
+    }
+    .hero-astronaut-bg {
+        display: none;
+    }
+    .hero-astronaut {
+        bottom: -10vw;
+        width: 40vw;
+    }
+    
+    /* Parallax fix */
+    #scene .hero-city-bg {
+        bottom: -25%!important;
+        left: -10%!important;
+        width: 120%;
+    }
+    #scene .hero-city {
+        bottom: -200px;
+    }
+    #scene .hero-astronaut-bg {
+        display: none!important;
+    }
+    #scene .hero-astronaut {
+        bottom: -10vw!important;
+    }
+}

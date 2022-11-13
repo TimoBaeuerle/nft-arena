@@ -1,0 +1,300 @@
+body {
+    background-color: #150c40;
+}
+
+.salespage-view {
+    background-image: url('../images/airdrop-bg.webp');
+    background-size: contain;
+    background-position: center;
+    height: min-content;
+    width: 100%;
+    overflow-x: clip;
+}
+
+.salespage-view img {
+    user-select: none;
+}
+
+.salespage-view h1 {
+    font-size: 40px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    filter: drop-shadow(2px 2px 3px black);
+}
+
+.salespage-view h2, .salespage-view #countdown {
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    filter: drop-shadow(2px 2px 3px black);
+}
+
+.salespage-view p {
+    font-size: 20px;
+    margin-bottom: 60px;
+    filter: drop-shadow(2px 2px 3px black);
+}
+
+.salespage-view .city-skyline {
+    position: relative;
+    left: -80%;
+}
+
+.salespage-view .city-skyline-gradient {
+    position: absolute;
+    top: 0;
+    opacity: 1;
+    animation: cityfog 8s infinite;
+}
+@keyframes cityfog {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.salespage-view > div.d-flex {
+    overflow-x: clip;
+}
+
+.salespage-view .content-container > div.d-flex > div.w-100 > * {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.salespage-view .city-gate {
+    position: relative;
+    height: auto;
+    min-width: 800px;
+    top: -300px;
+    z-index: 1;
+}
+
+.salespage-view .salespage-content {
+    position: relative;
+    top: -500px;
+}
+.salespage-view .salespage-content > div {
+    position: absolute;
+    background-color: #150c40;
+    width: 100%;
+    padding-top: 200px;
+}
+
+.salespage-view .salespage-content .salespage-key {
+    position: absolute;
+    left: 50vw;
+    top: 0;
+    z-index: 2;
+    max-height: 1200px;
+    transform: rotate(0deg) scale(1);
+    transition: all 2s ease-in-out;
+}
+
+.salespage-view .salespage-content .salespage-key.move {
+    top: -950px;
+    left: -5vw;
+    transform: rotate(270deg) scale(0.25);
+    transition: all 600ms ease-out;
+}
+
+.salespage-view .salespage-content .salespage-key.pulse {
+    transform: rotate(270deg) scale(0.30);
+}
+
+.salespage-view .btn-icon {
+    justify-content: center;
+}
+
+.salespage-view .btn-mint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    height: 42px;
+    width: 60%;
+    min-width: 230px;
+    margin-top: 15px;
+    text-transform: uppercase;
+    padding-right: 20px;
+    box-shadow: 0 0 0px #6508ff;
+    animation: pulse 3s linear infinite;
+}
+
+.salespage-view .disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.salespage-view .pulse-animation {
+    box-shadow: 0 0 0px #6508ff;
+    animation: pulse 3s linear infinite;
+}
+
+.salespage-view #video-modal .modal-content {
+    background-color: transparent;
+    min-width: unset;
+    box-shadow: none;
+}
+.salespage-view #video-modal .modal-content .close {
+    position: relative;
+    right: 25px;
+}
+.salespage-view #video-modal video {
+    max-height: 90vh;
+}
+.salespage-view .slick-prev,
+.salespage-view .slick-next {
+    z-index: 1;
+}
+.salespage-view .slick-prev {
+    left: -1px;
+    z-index: 1;
+}
+.salespage-view .slick-next {
+    right: 2px;
+    z-index: 1;
+}
+
+.salespage-view .slick-track {
+    background-color: #050237;
+}
+.salespage-view .slick-slide > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.salespage-view .token-container {
+    background-image: url('../images/sprites/mvk-bg.jpg');
+    background-size: cover;
+    width: 90%!important;
+}
+.salespage-view .token-container img {
+    width: 100%;
+    height: auto;
+    /*margin: auto;*/
+}
+.salespage-view .frame {
+    position: absolute;
+    width: 101%;
+    left: -2px;
+    z-index: 1;
+}
+
+.salespage-view #preview-modal.loaded .modal-content {
+    background: transparent;
+    box-shadow: none;
+}
+.salespage-view #preview-modal.loaded .close {
+    display: none;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0px #6508ff;
+    }
+    50% {
+        box-shadow: 0 0 25px #6508ff;
+    }
+    100% {
+        box-shadow: 0 0 0px #6508ff;
+    }
+}
+
+.salespage-view span.amount {
+    min-width: 35px;
+    text-align: center;
+    font-size: 26px;
+    user-select: none;
+}
+
+.salespage-view .alert {
+    background-color: #2c0059!important;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid #cb5757;
+    box-shadow: 0px 3px 15px 3px #22222280!important;
+}
+
+@media (min-width: 768px) {
+    .salespage-view h1 {
+        font-size: 80px;
+    }
+    .salespage-view h2, .salespage-view #countdown {
+        font-size: 60px;
+    }
+    .salespage-view p {
+        font-size: 24px;
+    }
+
+    .salespage-view .city-gate {
+        top: -25vw;
+    }
+    .salespage-view .salespage-content {
+        top: -50vw;
+    }
+    .salespage-view .salespage-content > div {
+        padding-top: 20vw;
+    }
+    .salespage-view .salespage-content .salespage-key {
+        top: 0;
+        left: 70vw;
+        max-height: 2000px;
+    }
+    .salespage-view .salespage-content .salespage-key.move {
+        left: 30vw;
+        top: -1400px;
+        transform: rotate(270deg) scale(0.5);
+    }
+    .salespage-view .salespage-content .salespage-key.pulse {
+        transform: rotate(270deg) scale(0.6);
+    }
+    .salespage-view .btn-mint {
+        width: 460px;
+        font-size: 32px;
+        height: 50px;
+    }
+}
+
+@media (min-width: 992px) {
+    .salespage-view .modal-content {
+        max-width: 600px;
+    }
+    .salespage-view .slick-prev:before, .slick-next:before {
+        font-size: 30px;
+    }
+    .salespage-view .slick-next {
+        right: 10px;
+    }
+    .salespage-view .slick-prev {
+        left: 3px;
+    }
+}
+
+@media (min-width: 2000px) {
+    .salespage-view .city-skyline {
+        left: 0;
+        min-width: 100%;
+    }
+    .salespage-view .salespage-content .salespage-key.move {
+        top: -1500px;
+    }
+}
+
+@media (min-width: 3000px) {
+    .salespage-view .salespage-content .salespage-key {
+        top: -10vw;
+        left: 70vw;
+        max-height: unset;
+    }
+}

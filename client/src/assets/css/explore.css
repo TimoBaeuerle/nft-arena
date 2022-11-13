@@ -1,0 +1,43 @@
+.explore-section {
+    /*background-image: url(../images/arena-fight-bg.webp);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    width: 100vw;
+    top: 0;*/
+}
+
+.fire-sprites {
+    animation: fire-sprite-animation 800ms infinite;
+    background-image: url(../images/sprites/fire-sprite-1.webp);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    width: 100vw;
+    top: 0;
+}
+
+@keyframes fire-sprite-animation {
+    0% {
+        background-image: url(../images/sprites/fire-sprite-1.webp);
+    }
+    16% {
+        background-image: url(../images/sprites/fire-sprite-2.webp);
+    }
+    32% {
+        background-image: url(../images/sprites/fire-sprite-3.webp);
+    }
+    48% {
+        background-image: url(../images/sprites/fire-sprite-4.webp);
+    }
+    64% {
+        background-image: url(../images/sprites/fire-sprite-5.webp);
+    }
+    80% {
+        background-image: url(../images/sprites/fire-sprite-6.webp);
+    }
+}

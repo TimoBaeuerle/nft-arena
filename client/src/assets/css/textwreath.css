@@ -1,0 +1,29 @@
+.wreath-container {
+    background: transparent;
+    display: flex;
+    justify-content: center;
+}
+
+.wreath-container > div {
+    background-image: url('../images/sprites/wreath.svg');
+    background-size: cover;
+    height: 200px;
+    width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wreath-container > div h3 {
+    width: 60%;
+    font-size: 28px;
+    font-weight: 300;
+    overflow: hidden;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 15px;
+    height: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

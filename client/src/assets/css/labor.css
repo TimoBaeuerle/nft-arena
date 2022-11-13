@@ -1,0 +1,116 @@
+.labor-section > img {
+    width: 100%;
+    min-height: 150px;
+    z-index: 2;
+}
+
+.labor-section > div {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin-top: -5px;
+}
+
+.labor-section > div > img {
+    position: relative;
+    left: -200%;
+    height: 1800px;
+    width: max-content;
+    z-index: 0;
+}
+
+.labor-section .founders {
+    position: absolute;
+    width: 100%;
+    margin-top: 12vw;
+    justify-content: center;
+    z-index: 1;
+}
+.labor-section .founders > div > div:first-child {
+    margin-bottom: 30px;
+}
+
+.labor-section .text-image {
+    flex-direction: column;
+    align-items: center;
+}
+.labor-section .text-image img {
+    height: 80vw;
+    width: 80vw;
+    max-height: 500px;
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+.labor-section .text-image > div {
+    margin: 0 15px!important;
+}
+.labor-section .text-image h2 {
+    text-align: center;
+}
+.labor-section .text-image p {
+    max-width: 500px;
+    text-align: center;
+    filter: drop-shadow(0 2px 3px black);
+}
+
+.labor-section .glass {
+    height: 150px;
+    width: auto;
+    top: -150px;
+    left: 0;
+    z-index: 0;
+}
+
+@media (min-width: 500px) {
+    .labor-section > div > img {
+        height: 2000px;
+    }
+}
+@media (min-width: 768px) {
+    .labor-section > img {
+        min-height: 300px;
+    }
+    .labor-section .text-image img {
+        height: 20vw;
+        width: 20vw;
+    }
+    .labor-section > div > img {
+        position: unset;
+        left: 0;
+        height: unset;  
+        min-height: 700px;
+        width: 100%;
+    }
+    .labor-section .founders {
+        margin-top: 7vw;
+    }
+    .labor-section .founders > div > div:first-child {
+        margin-bottom: 0;
+    }
+}
+@media (min-width: 992px) {
+    .labor-section > div > img {
+        min-height: 800px;
+    }
+}
+@media (min-width: 1200px) {
+    .labor-section .founders {
+        margin-top: 3vw;
+    }
+}
+@media (min-width: 1400px) {
+    .labor-section .founders {
+        margin-top: 10vw;
+    }
+    .labor-section .founders > div.justify-between {
+        justify-content: space-evenly;
+    }
+}
+@media (min-width: 2000px) {
+    .labor-section .founders {
+        margin-top: 15vw;
+    }
+    .labor-section .founders > div.justify-between {
+        justify-content: space-between;
+    }
+}

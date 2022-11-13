@@ -1,0 +1,121 @@
+.game-environment .city-room.room {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    min-width: 100%;
+    overflow-y: clip;
+    overflow-x: clip;
+}
+
+.game-environment .city-room.room img {
+    user-select: none;
+}
+
+.city-room .universe-background {
+    background-image: url(../images/universe-bg.jpg);
+    background-size: contain;
+    width: 200vw;
+    height: 200vw;
+    position: fixed;
+    top: -50vw;
+    left: -50vw;
+    animation: universerotation 2000s linear infinite;
+}
+@keyframes universerotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.game-environment .city-room.room.portrait {
+    width: fit-content;
+}
+
+.city-room .city-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    /*width: max-content;*/
+    width: 100%;
+}
+
+.city-room img.city {
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    width: auto;
+    min-width: 100%;
+}
+
+.city-room .interactives {
+    animation: city-icon-jump 2s ease-in-out infinite;
+    margin-top: 0;
+}
+@keyframes city-icon-jump {
+    from {
+        margin-top: 0;
+    }
+    50% {
+        margin-top: 1vh;
+        margin-top: calc(var(--vh, 1vh) * 1);
+    }
+    to {
+        margin-top: 0;
+    }
+}
+
+.city-room .interactives > div {
+    position: relative;
+}
+
+.game-environment .city-room.room.portrait .interactives button {
+    height: 3vh;
+    font-size: 1.5vh;
+}
+.city-room .interactives button {
+    position: relative;
+    background: linear-gradient(135deg,  #6508ff 0%,#6508ff 50%,#3d069e 100%);
+    border: none;
+    border-radius: 100%;
+    color: white;
+    font-size: 1vw;
+    height: 2vw;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    transform: scale(1.4);
+    transition: transform .3s ease-out;
+}
+.city-room .interactives button:hover {
+    transform: scale(1.6);
+}
+
+.game-environment .city-room.room:not(.portrait) .interactives button svg {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+}
+
+.city-room .interactives .gallery {
+    top: 34vh;
+    height: calc(var(--vh, 1vh) * 34);
+    left: 23.3%;
+}
+
+.city-room .interactives .gallery button {
+    width: 2%;
+}
+
+@media (min-width: 1200px) {
+    .city-room img.city {
+        width: 100vw;
+    }
+    .game-environment .city-room.room.portrait .interactives button {
+        font-size: 1vw;
+        height: 2vw;
+    }
+}

@@ -1,0 +1,104 @@
+.skyline-section {
+    background-image: url('../images/skyline-bg.webp');
+    background-position-x: center;
+    background-position-y: top;
+    height: 110vw;
+    overflow: hidden;
+    position: relative;
+}
+
+.skyline-section .desk-bottom > img {
+    position: relative;
+    top: -10px;
+    z-index: 1;
+}
+
+.skyline-section .desk-bottom .logo-container {
+    background-image: url('../images/skyline-bg-logo.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    overflow: hidden;
+    z-index: 0;
+    height: 70vw;
+    width: 70vw;
+    top: -31vw;
+    left: -35.25vw;
+}
+
+.skyline-section .desk-bottom h3 {
+    text-align: center;
+    font-size: 5vw;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 2vw;
+    z-index: 1;
+}
+.skyline-section .desk-bottom a {
+    text-align: center;
+    font-size: 3vw;
+    line-height: 3vw;
+    z-index: 10;
+    color: white;
+    text-decoration: none;
+    padding: 5px 3vw;
+}
+
+.skyline-section .logo-gradient {
+    background: radial-gradient(circle, #ffffffd0 0%, #7732fd 10%, #3d00b500 50%, #f0b90b00 100%);
+    height: 90vw;
+    width: 90.5vw;
+    top: -10vw;
+    left: -10vw;
+    z-index: 0;
+    opacity: 1;
+    animation: radialpulse 6s ease-in infinite;
+}
+@keyframes radialpulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.skyline-section .building-container {
+    position: absolute;
+    overflow: hidden;
+    height: 110vw;
+    width: 100%;
+}
+
+.skyline-section .building-container .one {
+    position: absolute;
+    width: 25vw;
+    bottom: -10vw;
+    left: -2vw;
+    z-index: 1;
+}
+.skyline-section .building-container .two {
+    position: absolute;
+    width: 30vw;
+    bottom: -30vw;
+    left: 8vw;
+    z-index: 1;
+}
+.skyline-section .building-container .three {
+    position: absolute;
+    width: 8vw;
+    bottom: -10vw;
+    left: 45.5vw;
+    z-index: 1;
+}
+.skyline-section .building-container .four {
+    position: absolute;
+    width: 45vw;
+    bottom: -20vw;
+    right: -19vw;
+    z-index: 1;
+}

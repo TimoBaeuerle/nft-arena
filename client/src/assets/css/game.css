@@ -1,0 +1,23 @@
+.game-environment > .room,
+.game-section > .room {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    width: 100vw;
+}
+
+#room-switch {
+    display: none;
+    background-color: #000;
+    position: fixed;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    width: 100vw;
+    top: 0;
+    z-index: 100;
+}
+
+.gameheader-section {
+    right: 0;
+}

@@ -1,0 +1,133 @@
+.airdrop-view {
+    background-image: url('../images/airdrop-bg.webp');
+    background-size: contain;
+    background-position: center;
+    overflow-x: clip;
+    position: absolute;
+    height: min-content;
+    min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
+    width: 100%;
+}
+
+.airdrop-view a {
+    font-size: 20px;
+    line-height: 20px;
+    height: 20px;
+}
+
+.airdrop-view a.glow {
+    box-shadow: 0 0 0px #6508ff;
+    animation: pulse 3s linear infinite;
+}
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0px #6508ff;
+    }
+    50% {
+        box-shadow: 0 0 25px #6508ff;
+    }
+    100% {
+        box-shadow: 0 0 0px #6508ff;
+    }
+}
+
+.airdrop-view h2 {
+    font-size: 30px;
+}
+.airdrop-view .airdrop-steps {
+    font-size: 18px;
+    text-align: left;
+}
+
+.airdrop-view .airdrop-steps li {
+    margin: 20px 0;
+}
+
+.airdrop-view .airdrop-steps a:nth-child(1n+2) {
+    filter: grayscale(1);
+}
+
+.airdrop-view .modal-container {
+    position: relative;
+    height: min-content;
+    min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
+}
+.airdrop-view .modal {
+    background: transparent;
+    box-shadow: unset;
+}
+
+.airdrop-view .airdrop-spacestation {
+    width: 80vw;
+    position: absolute;
+    left: -80vw;
+    max-width: 35vh;
+    transition: left 2s ease-out;
+}
+.airdrop-view .airdrop-spacestation.fly-in {
+    left: 80vw;
+}
+.airdrop-view .airdrop-spacestation.moving {
+    animation: airdrop-moving 10s linear infinite;
+}
+@keyframes airdrop-moving {
+    0% {
+        left: 70vw;
+    }
+    30% {
+        left: 10vw
+    }
+    50% {
+        left: -20vw;
+    }
+    80% {
+        left: 40vw;
+    }
+    100% {
+        left: 70vw;
+    }
+}
+
+@media (min-width: 768px) {
+    .airdrop-view h2 {
+        font-size: 40px;
+    }
+    .airdrop-view .airdrop-steps {
+        font-size: 20px;
+    }
+    .airdrop-view {
+        background-size: cover;
+    }
+    .airdrop-view .airdrop-spacestation {
+        width: 32vw;
+        left: -32vw;
+        max-width: 900px;
+    }
+    .airdrop-view .airdrop-spacestation.fly-in {
+        left: 12vw;
+    }
+    @keyframes airdrop-moving {
+        0% {
+            left: 12vw;
+        }
+        30% {
+            left: 3vw
+        }
+        50% {
+            left: 1vw;
+        }
+        80% {
+            left: 10vw;
+        }
+        100% {
+            left: 12vw;
+        }
+    }
+}
+@media (min-width: 992px) {
+    .airdrop-view .modal {
+        max-width: 700px;
+    }
+}
