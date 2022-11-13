@@ -1,4 +1,5 @@
 ## NFT Arena
+![](https://raw.githubusercontent.com/TimoBaeuerle/nft-arena/main/client/src/assets/images/nft-arena-preview.png)
 ### Project description
 This repository contains the NFT-Arena project files. To run application:
 1. Switch to `client` folder
