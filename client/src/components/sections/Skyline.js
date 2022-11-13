@@ -38,7 +38,7 @@ export default function Skyline() {
                         </div>
                     </div>
                     <h3 ref={zoomText.ref}>Welcome in the<br/>Multiverse</h3>
-                    <a href="https://nft-arenas.com/sale" className="btn btn-primary"><span>Play now</span></a>
+                    <a href="/sale" className="btn btn-primary"><span>Play now</span></a>
                 </div>
             </div>
         </div>

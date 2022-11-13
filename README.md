@@ -1,4 +1,11 @@
-## SPA Template
+## NFT Arena
+### Project description
+This repository contains the NFT-Arena project files. To run application:
+1. Switch to `client` folder
+2. Run `npm install` to install dependencies
+3. Run `npm run start` to start application
+4. Enjoy!
+
 ### Toolbox
 The Toolbox of this project contains following development tools:
 

@@ -20,7 +20,7 @@ export default function Header() {
                             />
                         </div>
                     </div>
-                    <a href="https://nft-arenas.com/sale" className="cta-anchor">
+                    <a href="/sale" className="cta-anchor">
                         <div className="cta-container layer-3">
                             <span>Play</span>
                         </div>

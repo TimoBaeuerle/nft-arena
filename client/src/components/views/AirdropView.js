@@ -31,7 +31,7 @@ export default function AirdropView() {
                     <div className="d-flex flex-column mt-4">
                         <a href="https://forms.gle/KaJmHr2UanTLMxdA7" className="btn btn-primary w-75 glow mx-auto">Go to airdrop</a>
                         <a href="https://medium.com/@nftarenas/nft-arena-airdrop-150k-nfta-and-nfts-9b69a7b20af5" className="btn btn-primary w-75 mx-auto">Medium article</a>
-                        <a href="https://nft-arenas.com/" className="btn btn-primary w-75 mx-auto">Back to homepage</a>
+                        <a href="/" className="btn btn-primary w-75 mx-auto">Back to homepage</a>
                     </div>
                 </div>
             </Modal>
